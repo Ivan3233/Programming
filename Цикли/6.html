@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>6</title>
+</head>
+
+<body>
+	<h2>Поточний стан банківського рахунку, на який поклали $24 під 6% річних у 1726р. (нарахування раз на рік)</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let deposit = 24;		
+			let year = 1726;
+			while (year<new Date().getFullYear()){
+					deposit = deposit*1.06;
+					year++;
+			} 
+			field.innerHTML = "<p>Станом на зараз на рахунку $"+ deposit +"</p>";		
+		</script>
+</body>
+</html>

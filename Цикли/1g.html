@@ -1,0 +1,25 @@
+<html>
+<head>
+	<title>1g</title>
+</head>
+
+<body>
+	<h2>Програма для обчислення суми квадратів перших n натуральних чисел, кожне з яких при діленні на m дає в залишку q</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let n = parseInt(prompt("Введіть n:"));	
+			let m = parseInt(prompt("Введіть m:"));
+			let q = parseInt(prompt("Введіть q:"));
+			let sum=0;							
+			for (let i=0;i<=n;i++) {
+				if (i % m === q) {
+					let square = i*i;
+					sum = sum + square;
+					field.innerHTML += square + " ";
+				}
+			}
+			field.innerHTML += `<p>${sum}</p>`;			
+		</script>
+</body>
+</html>

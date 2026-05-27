@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>14</title>
+</head>
+
+<body>
+	<h2>Програма для знаходження суми та кількості чисел, що закінчуються на 2.</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let count = 0;
+			let sum = 0;
+			while (true) {
+				let n = parseInt(prompt("Введіть ціле число, щоб продовжити, або 0 , щоб зупинитися: "));
+				if (n%10 === 2) {
+				sum = sum+n;
+				count = count + 1;
+				field.innerHTML += n + " "
+				}
+				if (n === 0) {
+				break
+				}
+			}
+			let avg = (sum/count)
+			field.innerHTML += `<p>Сума: ${sum}</p>`;
+			field.innerHTML += `<p>Кількість чисел: ${count}</p>`;
+		</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>1c</title>
+</head>
+
+<body>
+	<h1>Програма для обчислення суми перших n натуральних парних чисел</h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let n = parseInt(prompt("Введіть n:"));
+			let sum=0;							
+			for (let i=1;i<=n;i++) {
+				if (i % 2 === 0) {
+					sum = sum + i;
+					field.innerHTML += i + " ";
+				}
+			}
+			field.innerHTML += `<p>${sum}</p>`;			
+		</script>
+</body>
+</html>

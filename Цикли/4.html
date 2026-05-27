@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>4</title>
+</head>
+
+<body>
+	<h2>Програма для обчислення факторіала</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let p = parseInt(prompt("Введіть число, для якого треба знайти факторіал:"));	
+			let product=1;							
+			for (let i=1;i<=p;i++) {
+					product = product*i;
+			}
+			field.innerHTML = "<p>p! = " +product+ "</p>";		
+		</script>
+</body>
+</html>

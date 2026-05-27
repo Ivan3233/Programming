@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>10</title>
+</head>
+
+<body>
+	<h2>Програма для пошуку середнього арифметичного парних чисел</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let count = 0;
+			let sum = 0;
+			while (true) {
+				let n = parseInt(prompt("Введіть ціле парне число, що продовжити, чи непарне, щоб зупинитися: "));
+				if (n % 2 !== 0) {
+				break
+				}
+				sum = sum+n;
+				count = count + 1;
+				field.innerHTML += n + " "
+			}
+			let avg = (sum/count)
+			field.innerHTML += `<p>Сума: ${sum}</p>`;
+			field.innerHTML += `<p>Середнє арифметичне: ${avg}</p>`;
+		</script>
+</body>
+</html>

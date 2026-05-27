@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>17</title>
+</head>
+
+<body>
+	<h2>Програма для визначення маси найважчого предмета.</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let maxweight = 0;
+			let mi = 0;
+			for (let i =1; i <=12; i++){
+				let weight = parseFloat(prompt("Введіть масу предмета №" + i + " в кг:"));
+				if (maxweight<weight){
+				maxweight=weight
+				mi=i
+				}
+			}	
+			field.innerHTML = "<p>Найбільша маса у предмету №"+ mi + " і дорівнює вона " + maxweight+"кг </p>"	
+		</script>
+</body>
+</html>

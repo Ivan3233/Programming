@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>1f</title>
+</head>
+
+<body>
+	<h2>Програма для обчислення суми натуральних чисел менших за 100 та кратних b</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");	
+			let b = parseInt(prompt("Введіть b:"));
+			let sum=0;							
+			for (let i=0;i<=100;i++) {
+				if (i % b === 0) {
+					sum = sum + i;
+					field.innerHTML += i + " ";
+				}
+			}
+			field.innerHTML += `<p>${sum}</p>`;			
+		</script>
+</body>
+</html>

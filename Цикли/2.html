@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>2</title>
+</head>
+
+<body>
+	<h2>Програма для пошуку всіх степенів числа а, при яких воно менше за b.</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let a = parseInt(prompt("Введіть a:"));	
+			let b = parseInt(prompt("Введіть b:"));
+			let result="";							
+				for (let i=1; Math.pow(a,i)<b; i++){
+				result += i + " ";
+				}
+			field.innerHTML = "<p>"+"Степені числа " + a + ", при яких воно менше за " + b +": " + result +"</p>";
+		</script>
+</body>
+</html>

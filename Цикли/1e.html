@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>1e</title>
+</head>
+
+<body>
+	<h2>Програма для обчислення суми квадратів натуральних чисел від a до b</h2>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let a = parseInt(prompt("Введіть a:"));	
+			let b = parseInt(prompt("Введіть b:"));
+			let sum=0;							
+			for (let i=a;i<=b;i++) {
+				if (i % 2 !== 0) {
+					let square = i*i;
+					sum = sum + square;
+					field.innerHTML += square + " ";
+				}
+			}
+			field.innerHTML += `<p>${sum}</p>`;			
+		</script>
+</body>
+</html>
