@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>4</title>
+</head>
+
+<body>
+	<h1>Програма для знаходження елементів з парним номером</h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let txtnumb = "";
+			let mnumb = [];	
+			for (let i=1;i<11;i++) {
+			let numb = parseFloat(prompt("Введіть число №" + i + ":"));
+				mnumb.push(numb);
+				if (i % 2 === 0) {
+				txtnumb += numb + "; ";
+				}			
+			}
+			document.getElementById("field").innerHTML = 
+			"<p>Елементи з парним номером: "+ txtnumb + "</p>";
+		</script>
+</body>
+</html>

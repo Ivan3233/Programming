@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>2</title>
+</head>
+
+<body>
+	<h1>Програма для знаходження кількості чисел кратних 3</h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let count = 0;
+			let txtnumb = "";
+			let numb = [];	
+			for (let i=0;i<10;i++) {
+			let randnumb = Math.floor(Math.random() * 20)+1;
+			numb.push(randnumb);
+            txtnumb += randnumb + "; ";			
+			if (randnumb % 3 === 0) {
+				count = count + 1;
+				}			
+			}
+			document.getElementById("field").innerHTML = 
+			"<p>Сгенеровані числа: "+ txtnumb + "</p>"+
+			"<p>Кількість кратних 3: "+ count+"</p>";
+		</script>
+</body>
+</html>

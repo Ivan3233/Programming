@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>3</title>
+</head>
+
+<body>
+	<h1>Програма для обрахування доходу за літо </h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let sum = 0;
+			let txtincome = "";
+			let income = [];	
+			for (let i=1;i<13;i++) {
+			let incomepermonth = Math.floor(Math.random() * 8000)+1000;
+			income.push(incomepermonth);
+            txtincome += incomepermonth + "; ";			
+			if (i>5 && i<9) {
+				sum = sum + incomepermonth;
+				}			
+			}
+			document.getElementById("field").innerHTML = 
+			"<p>Дохід по місяцям: "+ txtincome + "</p>"+
+			"<p>Дохід за літо: "+ sum+"</p>";
+		</script>
+</body>
+</html>

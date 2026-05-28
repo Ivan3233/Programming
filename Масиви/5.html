@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>5</title>
+</head>
+
+<body>
+	<h1>Програма для знаходження суми від'ємних дійсних чисел</h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let sum = 0;
+			let txtnumb = "";
+			let numb = [];
+			for (let i=0;i<15;i++) {
+			let randnumb = Math.random()*40-20;
+			randnumb  = parseFloat(randnumb.toFixed(2));
+			numb.push(randnumb);
+            txtnumb += randnumb + "; ";			
+			if (randnumb < 0) {
+				sum = sum + randnumb;
+				}			
+			}
+			document.getElementById("field").innerHTML = 
+			"<p>Сгенеровані числа: "+ txtnumb + "</p>"+
+			"<p>Сума від'ємних чисел: "+ sum+"</p>";
+		</script>
+</body>
+</html>

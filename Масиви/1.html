@@ -1,0 +1,27 @@
+<html>
+<head>
+	<title>1</title>
+</head>
+
+<body>
+	<h1>Програма для знаходження кількості непарниих чисел</h1>
+	<div id="field"></div>
+		<script>
+			let field = document.getElementById("field");
+			let count = 0;
+			let txtnumb = "";
+			let numb = [];	
+			for (let i=0;i<15;i++) {
+			let randnumb = Math.floor(Math.random() * 100);
+			numb.push(randnumb);
+            txtnumb += randnumb + "; ";			
+			if (randnumb % 2 !== 0) {
+				count = count + 1;
+				}			
+			}
+			document.getElementById("field").innerHTML = 
+			"<p>Сгенеровані числа: "+ txtnumb + "</p>"+
+			"<p>Кількість непарних: "+ count+"</p>";
+		</script>
+</body>
+</html>
